@@ -1,7 +1,37 @@
-<!DOCTYPE html>
-html><head>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
 <body>
-
+  <form class="userData" action="#" method="post">
+    <input type="text" name="firstName" value="enter your name">
+    <input type="number" name="age" value="0">
+    <input type="email" name="email" value="example@mail.com">
+    <button type="submit">submit</button>
+  </form>
+  <script>
+    firstName = document.querySelector('input[name="firstName"]').value;
+    age = document.querySelector('input[name="age"]').value;
+    email = document.querySelector('input[name="email"]').value;
+    person = {
+      create: function createPerson(firstName, age, email) {
+          this.firstName = firstName;
+          this.age = age;
+          this.email = email;
+      },
+      printPersonData: function printPersonData() {
+          console.log("first name: " + this.firstName + " age: " + this.age + " email: " + this.email);
+      }
+    }
+    let submitButton = document.querySelector('button[type="submit"]');
+    submitButton.addEventListener("click", person.create(firstName, age, email));
+    console.log("person first name: " + person.firstName + "\n"
+      + "person.age: " + person.age + "\n"
+      + "person.email: " + person.email
+    );
+  </script>
 </body>
+</html>
