@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" style="min-height: 100%; height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            min-height: 100%;
+            height: 100%;
+        }
+        td {
+            padding: 5px;
+        }
+        img {
+            max-height: 200px;
+        }
+        .remove-btn {
+            background: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form id="submitForm">
+            <input type="text" id="firstName" placeholder="Enter first name ...">
+            <input type="text" id="email" placeholder="Enter email ...">
+            <input type="number" min="0" max="100" id="age" placeholder="Enter age...">
+            <input type="text" id="picture" placeholder="Enter picture url ...">
+            <br>
+            <br>
+            <button id="submitBtn" type="submit">Submit</button>
+            <br><br>
+        </form>
+
+        <table border="1" class="users-table">
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Username:</td>
+                    <td>Email:</td>
+                    <td>Age</td>
+                    <td>Picture</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <br><br>
+        <button class="load-currencies">Load Currencies</button>
+        <table border="1" class="currencies">
+            <thead>
+            <tr>
+                <td>#</td>
+                <td>Код:</td>
+                <td>Валюта:</td>
+                <td>Курс:</td>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <br><br>
+        <button class="load-countries">Load Countries</button>
+        <table border="1" class="countries">
+            <thead>
+            <tr>
+                <td>Название страны</td>
+                <td>Столица</td> 
+                <td>Регион</td>
+                <td>Численность</td>
+                <td>Площадь</td>
+                <td>Валюты</td>
+                <td>Языки</td>
+                <td>Страны с которыми граничит</td>
+                <td>Флаг</td>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="hw24Sept19app.js"></script>
+</body>
+</html>
