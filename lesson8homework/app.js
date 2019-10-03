@@ -67,6 +67,7 @@ function setDate(dateToLoad) {
 }
 
 window.onload = setDate(dateToLoad);
+window.onload = loadCurrencies('');
 
 let renderCurrenciesHtml = (data) => {
     let currenciesStr = '';
