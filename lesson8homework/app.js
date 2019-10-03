@@ -1,33 +1,23 @@
-// create array for currencies
 let currencies = [];
 let savedCurrenciesStr = '';
 
-// set name for date input field and text in name field
 let dateField = $('input[type=date]');
 let textInNameField = $('input[type=text]');
 
-// today date
 let todayDate = new Date().toISOString().split('T')[0].split('-').join('');
 console.log('todaydate ' + todayDate);
 
-// date from local Storage
 let lsDate = localStorage.getItem('date');
 console.log('lsdate ' + lsDate);
 
-// set date for setting in date field
 let dateToLoad = lsDate ? lsDate : todayDate;
 
-// save date to local storage
 let saveDate = () => {
     console.log('field: ' + dateField.val());
     localStorage.setItem('date', dateField.val().split('-').join(''));
     let gettedDate = localStorage.getItem('date');
     console.log('gettedDate ' + gettedDate);
 };
-
-// let saveCurrencies = (data) => {
-//     let savedCurrencies = JSON.j
-// };
 
 let loadCurrencies = (textForFilter) => {
     let userDate = dateField.val();
@@ -44,12 +34,8 @@ let loadCurrencies = (textForFilter) => {
             console.log(e);
         },
         success: (data) => {
-            // console.log('saved data ' + data.JSON.stringify());
-
             renderSavedCurrencies(data, textForFilter);
             localStorage.setItem('alreadyLoaded', 'yes');
-
-            // renderCurrenciesHtml(data, textForFilter);
             saveDate();
         }
     });
@@ -57,12 +43,9 @@ let loadCurrencies = (textForFilter) => {
 
 
 let renderSavedCurrencies = (data, textForFilter) => {
-    // console.log('data in rsc ' + data);
-    // textForFilter = 'но';
     let arrayOfCountries = [];
     let j = 0;
     for(let index in data) {
-        // console.log(item);
         if (data[index]['txt'].toLowerCase().includes(textForFilter)) {
             console.log('includes!!!' + data[index]['txt']);
             j++;
@@ -83,7 +66,6 @@ function setDate(dateToLoad) {
 	loadCurrencies();
 }
 
-// set date when the window loads
 window.onload = setDate(dateToLoad);
 
 let renderCurrenciesHtml = (data) => {
@@ -106,3 +88,5 @@ textInNameField.keyup(() => {
     console.log('textForFilter ' + textForFilter);
     loadCurrencies(textForFilter);
 })
+
+let filteredByName = jQuery.map()
