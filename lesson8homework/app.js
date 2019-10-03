@@ -49,7 +49,7 @@ let loadCurrencies = (textForFilter) => {
             renderSavedCurrencies(data, textForFilter);
             localStorage.setItem('alreadyLoaded', 'yes');
 
-            renderCurrenciesHtml(data, textForFilter);
+            // renderCurrenciesHtml(data, textForFilter);
             saveDate();
         }
     });
@@ -57,17 +57,22 @@ let loadCurrencies = (textForFilter) => {
 
 
 let renderSavedCurrencies = (data, textForFilter) => {
-    textForFilter = 'ав';
+    // console.log('data in rsc ' + data);
+    // textForFilter = 'но';
     let arrayOfCountries = [];
-    for(let item of data) {
+    let j = 0;
+    for(let index in data) {
         // console.log(item);
-        if (item['txt'].includes(textForFilter)) {
-            console.log('includes!!!');
-            arrayOfCountries.push(item);
+        if (data[index]['txt'].toLowerCase().includes(textForFilter)) {
+            console.log('includes!!!' + data[index]['txt']);
+            j++;
+            arrayOfCountries.push(data[index]);
         }
+        console.log('j ' + j);
     }
 
     console.log('arrayOfCountries ' + arrayOfCountries);
+    renderCurrenciesHtml(arrayOfCountries);
 }
 
 function setDate(dateToLoad) {
@@ -101,5 +106,3 @@ textInNameField.keyup(() => {
     console.log('textForFilter ' + textForFilter);
     loadCurrencies(textForFilter);
 })
-
-let filteredByName = jQuery.map()
