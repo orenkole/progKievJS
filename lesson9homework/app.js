@@ -135,8 +135,8 @@ let filterOnInput = (e) => {
     let capital = '';
     let name = '';
     if($(e.currentTarget).hasClass('capital') || $(e.currentTarget).hasClass('name')){
-        capital = $(e.currentTarget).val().trim();
-        name = $(e.currentTarget).val().trim();
+        capital = $('.capital').val().trim();
+        name = $('.name').val().trim();
     }
     let dataToRender = dataObj.countries.filter(el => {
         return (
