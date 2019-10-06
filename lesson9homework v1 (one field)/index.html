@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" style="min-height: 100%; height: 100%;">
+<head>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            min-height: 100%;
+            height: 100%;
+        }
+        td {
+            padding: 5px;
+        }
+        img {
+            max-height: 200px;
+        }
+        .remove-btn {
+            background: red;
+            color: white;
+        }
+        .sortable {
+            cursor: pointer;
+            position: relative;
+        }
+        .sortable.active {
+            background: yellow;
+        }
+        .sortable.active:not(.reversed):after {
+            content: 'a';
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .sortable.active.reversed:after {
+            content: 'b';
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .filter-countries {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+        <form action="">
+            <input type="text" class="filter-countries" placeholder="filter on country name or capital" width=80px>
+
+        </form>
+        <button class="load-countries">Load Countries</button>
+        <table border="1" class="countries">
+            <thead>
+            <tr>
+                <td data-attr="name" class="sortable">Название страны</td>
+                <td>Столица</td>
+                <td>Регион</td>
+                <td data-attr="population" class="sortable">Численность</td>
+                <td data-attr="area" class="sortable">Площадь</td>
+                <td>Валюты</td>
+                <td>Флаг</td>
+                <td>Языки</td>
+                <td>Граничит с</td>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
