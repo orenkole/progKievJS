@@ -138,18 +138,14 @@ let filterOnInput = (e) => {
         capital = $(e.currentTarget).val().trim();
         name = $(e.currentTarget).val().trim();
     }
-    if(capital || name) {
-        let dataToRender = dataObj.countries.filter(el => {
-            return (
-                el.name.toLowerCase().indexOf(name.toLowerCase()) > -1
-                &&
-                el.capital.toLowerCase().indexOf(capital.toLowerCase()) > -1 
-            )
-        });
-        sortTable(dataToRender);
-    } else {
-        sortTable(dataObj.data);
-    }
+    let dataToRender = dataObj.countries.filter(el => {
+        return (
+            el.name.toLowerCase().indexOf(name.toLowerCase()) > -1
+            &&
+            el.capital.toLowerCase().indexOf(capital.toLowerCase()) > -1 
+        )
+    });
+    sortTable(dataToRender);
 };
 
 $('.filter-countries').on('keyup', filterOnInput);
