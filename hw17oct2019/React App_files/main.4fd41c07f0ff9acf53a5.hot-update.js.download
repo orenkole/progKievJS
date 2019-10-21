@@ -1,0 +1,53 @@
+webpackHotUpdate("main",{
+
+/***/ "./src/components/CustomBtn.js":
+/*!*************************************!*\
+  !*** ./src/components/CustomBtn.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _CustomBtn_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CustomBtn.css */ "./src/components/CustomBtn.css");
+/* harmony import */ var _CustomBtn_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_CustomBtn_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-moment */ "./node_modules/react-moment/dist/index.js");
+/* harmony import */ var react_moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_moment__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "D:\\progkiev\\js\\lesson 13\\src\\components\\CustomBtn.js";
+
+
+
+
+let saySmth = function (e) {
+  alert(123, e);
+};
+
+const dateToFormat = new Date();
+
+function CustomBtn() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "custom-btn",
+    onClick: saySmth,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_moment__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    date: dateToFormat,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (CustomBtn);
+
+/***/ })
+
+})
+//# sourceMappingURL=main.4fd41c07f0ff9acf53a5.hot-update.js.map
